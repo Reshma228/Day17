@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10%;
+        }
+        .box{
+            border: 2px solid transparent;
+            height: 60vh;
+            width: 60%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .b{
+            border: 2px solid transparent; 
+            position: absolute;
+            height: 50vh;
+            width: 20%;  
+            /* background-color: aqua;  */
+            transform-style: preserve-3d;
+            transition:all .5s linear;
+            left: 21%;
+
+        }
+       .front{
+            position: absolute;
+            height: 100%;
+            width: 100%; 
+            /* backface-visibility: hidden; */
+            /* background-color: rgb(33, 20, 2); */
+            background-image: url("./2.webp");
+            background-size:250px 300px;
+            background-repeat: no-repeat;
+        }
+        .back{
+            position: absolute;
+            height: 100%;
+            width: 100%; 
+            backface-visibility: hidden;
+            background-color: azure;
+            transform:rotateY(180deg) ;
+            
+        }
+        p{
+            margin-top: 30%;
+            font-size: 10px;
+        }
+        .b:hover{
+            transform: rotateY(180deg);
+        }
+        .b:nth-child(2){
+            margin-left: 35%;
+        }
+        .front:nth-child(2){
+            background-image: url("./7.webp");
+            background-size:250px 300px;
+            background-repeat: no-repeat;  
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="b">
+
+            <div class="front">
+front
+            </div>
+
+            <div class="back">
+                <p>The fifth and my most favorite in this Harry Potter list of all movies is the order of Phoenix.
+                    The big bad villain has arrived and it is time for Harry to take charge and not be a kid anymore. </p>
+               
+            </div>
+
+            </div>
+            <div class="b">
+
+                <div class="front">
+    front
+                </div>
+    
+                <div class="back">
+                    <p>The fifth and my most favorite in this Harry Potter list of all movies is the order of Phoenix.
+                        The big bad villain has arrived and it is time for Harry to take charge and not be a kid anymore. </p>
+                   
+                </div>
+    
+                </div>
+    </div>
+</body>
+</html>

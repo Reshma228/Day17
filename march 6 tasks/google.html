@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 25px;
+            min-height: 90vh;
+            
+        }
+        span{
+           
+            font-size: 20px;
+            color: pink;
+        }
+        span:nth-child(odd){
+            animation: up 3s linear infinite;
+            color: aqua;
+        }
+        span:nth-child(even){
+         animation: down 3s linear infinite;
+         color: blue;
+        }
+
+
+        @keyframes down{
+            100%{
+                color: green;
+                transform: translateY(200px);
+            }
+        }
+        @keyframes up
+        {
+            100%{
+                color: green;
+                transform: translateY(-200px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <span>G</span>
+    <span>O</span>
+    <span>O</span>
+    <span>G</span>
+    <span>L</span>
+    <span>E</span>
+</body>
+</html>
